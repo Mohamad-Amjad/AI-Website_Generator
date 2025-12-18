@@ -1,0 +1,23 @@
+
+
+.signup {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;    
+  font-size: small;
+}
+
+@media (max-width: 768px) {
+  .signup {
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+  }
+}

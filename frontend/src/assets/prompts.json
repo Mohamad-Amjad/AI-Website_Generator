@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Hero Header",
+    "description": "Generate a compelling hero section for your website with headline, subheadline, and call-to-action."
+  },
+  {
+    "id": 2,
+    "name": "About Section",
+    "description": "Create an engaging 'About Us' section highlighting your company or project story."
+  },
+  {
+    "id": 3,
+    "name": "Features Section",
+    "description": "Generate a section showcasing the main features or benefits of your product or service."
+  },
+  {
+    "id": 4,
+    "name": "Testimonials",
+    "description": "Create a testimonial section with quotes and ratings from satisfied customers."
+  },
+  {
+    "id": 5,
+    "name": "Call to Action",
+    "description": "Generate a strong call-to-action section to encourage user engagement or conversions."
+  },
+  {
+    "id": 6,
+    "name": "Pricing Table",
+    "description": "Create a responsive pricing table comparing different plans or offerings."
+  },
+  {
+    "id": 7,
+    "name": "Blog Section",
+    "description": "Generate a blog section layout with recent posts, images, and excerpts."
+  },
+  {
+    "id": 8,
+    "name": "Contact Form",
+    "description": "Create a user-friendly contact form section with fields, buttons, and instructions."
+  },
+  {
+    "id": 9,
+    "name": "FAQ Section",
+    "description": "Generate a frequently asked questions section with collapsible answers."
+  },
+  {
+    "id": 10,
+    "name": "Footer",
+    "description": "Create a footer section with links, social icons, and copyright information."
+  }
+]

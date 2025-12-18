@@ -1,0 +1,163 @@
+.playground {
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.preview-frame {
+  width: 100%;
+  height: 75vh;
+  border: none;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 20px;
+}
+
+.placeholder-text {
+  display: flex;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.delete
+{
+  padding: 2px;
+  color: #3b82f6;
+}
+
+.delete:hover{
+  color: red;
+}
+.download {
+  position: fixed;
+  top: 5.5rem;
+  right: 2rem;
+  background-color: #079f35;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.history{
+  background-color: black;
+  color: #ddd;
+  right: 60vw;
+}
+
+.download:hover {
+  background-color: #0fe689;
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
+}
+.history:hover
+{
+  background-color: #56b3ed;
+  box-shadow: 0 6px 12px rgba(213, 220, 236, 0.4);
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .preview-frame {
+    height: 65vh;
+  }
+
+  .download {
+    right: 1rem;
+    top: 1rem;
+    padding: 8px 14px;
+  }
+
+  .prompt-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .playground {
+    padding: 10px;
+  }
+
+  .preview-frame {
+    height: 60vh;
+  }
+
+  .download {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .prompt-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .preview-frame {
+    height: 55vh;
+  }
+
+  .download {
+    width: calc(100% - 2rem);
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .prompt-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

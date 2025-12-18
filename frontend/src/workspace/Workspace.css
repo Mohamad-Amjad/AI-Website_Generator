@@ -1,0 +1,51 @@
+.workspace {
+  display: flex;
+  flex-direction: row; /* desktop: sidebar left, playground right */
+  height: 86vh;
+  gap: 10px;
+}
+
+/* Sidebar will keep its width, playground takes remaining space */
+.workspace > .sidebar {
+  flex: 0 0 300px; /* fixed width */
+}
+
+/* Playground takes the remaining space */
+.workspace > .playground {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ---------------- Responsive ---------------- */
+
+/* Tablets (width <= 1024px) */
+@media (max-width: 1024px) {
+  .workspace {
+    flex-direction: column; /* stack vertically */
+    height: auto;
+  }
+
+  .workspace > .sidebar {
+    width: 100%;
+    flex: none;
+  }
+
+  .workspace > .playground {
+    width: 100%;
+    flex: none;
+    margin-top: 10px;
+  }
+}
+
+/* Mobile (width <= 768px) */
+@media (max-width: 768px) {
+  .workspace {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .workspace > .sidebar,
+  .workspace > .playground {
+    width: 100%;
+  }
+}

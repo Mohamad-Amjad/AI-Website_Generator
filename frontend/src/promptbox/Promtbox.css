@@ -1,0 +1,186 @@
+.promtBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+/* Textarea placeholder */
+.inputBox textarea::placeholder {
+    font-size: 40px;
+    color: darkgrey;
+    text-align: center;
+    line-height: 40vh; /* vertically center placeholder */
+}
+
+/* Textarea */
+.inputBox textarea {
+    width: 60vw;
+    max-width: 700px;
+    height: 40vh;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color:rgba(1, 2, 17, 0.2);
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 30px rgba(253, 253, 253, 0.8);
+    color: aliceblue;
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+    caret-color: transparent;
+    resize: none;
+    overflow: hidden;
+}
+
+/* Generate button */
+.generate-btn button {
+    width: 55vw;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(1, 2, 17, 0.6);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(238, 240, 244, 0.7);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.generate-btn button:hover {
+    box-shadow: 0 0 15px rgba(47, 155, 244, 0.7);
+    transform: scale(1.02);
+}
+
+.generate-btn button:disabled
+{
+    box-shadow: none;
+    color: grey;
+    transform: none;
+}
+
+/* Prompt ideas */
+.prompt-ideas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    width: 55vw;
+  
+    justify-items: center;
+    margin-top: 10px;
+}
+
+.prompt-ideas button {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(1, 2, 17, 0.4);
+    color: aliceblue;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.prompt-ideas button:hover {
+    box-shadow: 0 0 10px rgba(47, 155, 244, 0.6);
+    transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* Large screens <= 1200px */
+@media screen and (max-width: 1200px) {
+    .inputBox textarea {
+        width: 65vw;
+        height: 20vh;
+    }
+    .inputBox textarea::placeholder {
+        line-height: 20vh;
+        font-size: 35px;
+    }
+    .generate-btn button {
+        width: 60vw;
+        font-size: 15px;
+    }
+    .prompt-ideas {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    }
+}
+
+/* Medium devices <= 992px */
+@media screen and (max-width: 992px) {
+    .inputBox textarea {
+        width: 70vw;
+        height: 20vh;
+        font-size: 15px;
+    }
+    .inputBox textarea::placeholder {
+        line-height: 20vh;
+        font-size: 30px;
+    }
+    .generate-btn button {
+        width: 65vw;
+        font-size: 14px;
+    }
+    .prompt-ideas {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
+/* Tablets / small devices <= 768px */
+@media screen and (max-width: 768px) {
+    .inputBox textarea {
+        width: 80vw;
+        height: 15vh;
+        padding: 15px;
+    }
+    .inputBox textarea::placeholder {
+        line-height: 15vh;
+        font-size: 25px;
+    }
+    .generate-btn button {
+        width: 75vw;
+        font-size: 14px;
+    }
+    .prompt-ideas {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        width: 80vw;
+        font-size: 6px;
+    }
+        .prompt-ideas button
+    {
+        font-size: 12px;
+    }
+}
+
+/* Small phones <= 480px */
+@media screen and (max-width: 480px) {
+    .inputBox textarea {
+        width: 90vw;
+        height: 10vh;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .inputBox textarea::placeholder {
+        line-height: 10vh;
+        font-size: 20px;
+    }
+    .generate-btn button {
+        width: 85vw;
+        font-size: 13px;
+    }
+    .prompt-ideas {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        width: 90vw;
+        gap: 8px;
+    }
+    .prompt-ideas button
+    {
+        font-size: 10px;
+    }
+}
