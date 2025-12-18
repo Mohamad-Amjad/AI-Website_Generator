@@ -1,0 +1,14 @@
+[
+  {
+    "role": "user",
+    "inputPrompt": "Generate a compelling hero section for your website with headline, subheadline, and call-to-action."
+  },
+  {
+    "role": "user",
+    "inputPrompt": "Create an engaging 'About Us' section highlighting your company or project story."
+  },
+  {
+    "role": "user",
+    "inputPrompt": "Generate a section showcasing the main features or benefits of your product or service."
+  }
+]
