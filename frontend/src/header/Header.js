@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../assets/logo.png";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { useUser,SignOutButton} from "@clerk/clerk-react";
@@ -10,7 +9,7 @@ const Header = () => {
     <div className="header">
       <Link to={'/'}>
       <div className="logo">
-        <img src={Logo} alt="logo"/>
+        <img src='/logo.png' alt="logo"/>
       </div>
       </Link>
       <div className="title">

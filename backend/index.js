@@ -1,3 +1,4 @@
+
 const express=require('express');
 const app=express();
 const dotenv=require('dotenv');
@@ -19,6 +20,8 @@ app.use('/api/v1/',userprompts);
 app.use('/api/v1/',response);
 app.use('/api/v1/',singlePrompts);
 app.use('/api/v1/',deletePrompt);
+
+
 app.listen(process.env.PORT,()=>{
     console.log("Server Listening the port ",process.env.PORT);
 });

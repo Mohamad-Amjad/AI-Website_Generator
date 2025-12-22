@@ -13,6 +13,7 @@ const Playground = ({ htmlCode, promptClick = () => {} }) => {
         if (Array.isArray(res)) setPrompt(res);
         else if (Array.isArray(res.prompts)) setPrompt(res.prompts);
         else setPrompt([]);
+        
       })
       .catch((err) => {
         console.error("Error fetching prompts:", err);
